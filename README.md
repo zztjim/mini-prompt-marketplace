@@ -37,40 +37,6 @@ Users can:
 
 ---
 
-## ⚙️ Setup Instructions
-
-### 1️⃣ Clone the Repository
-```bash
-git clone https://github.com/<your-team>/mini-prompt-marketplace.git
-cd mini-prompt-marketplace
-````
-
-### 2️⃣ Create a Virtual Environment
-
-```bash
-python -m venv venv
-source venv/bin/activate  # (Mac/Linux)
-venv\Scripts\activate     # (Windows)
-```
-
-### 3️⃣ Install Dependencies
-
-```bash
-pip install flask
-```
-
-### 4️⃣ Run the App
-
-```bash
-python app.py
-```
-
-### 5️⃣ Open in Browser
-
-Visit 👉 [http://127.0.0.1:5000](http://127.0.0.1:5000)
-
----
-
 ## 🌿 Git & Branch Workflow
 
 Each member works in a **separate branch** to avoid conflicts:
@@ -81,29 +47,13 @@ Each member works in a **separate branch** to avoid conflicts:
 | `frontend`     | Member 2 | HTML, Bootstrap UI                   |
 | `testing-docs` | Member 3 | Test plan, risk table, documentation |
 
-### Workflow:
-
-1. Create your branch
-
-   ```bash
-   git checkout -b backend
-   ```
-2. Push changes
-
-   ```bash
-   git add .
-   git commit -m "Add upload route"
-   git push origin backend
-   ```
-3. Open a **Pull Request (PR)** on GitHub → wait for review → merge into `main`.
-
 ---
 
 ## 🧪 Testing Artifacts
 
 | File                | Description                                               |
 | ------------------- | --------------------------------------------------------- |
-| `test_plan.md`      | Lists 5–6 manual test cases (login, upload, list prompts) |
+| `test_plan.md`      | Lists 5 manual test cases (login, upload, list prompts)   |
 | `risk_table.md`     | Identifies key project risks with mitigation strategies   |
 | `config_summary.md` | Documents setup, environment, and Git configuration       |
 
@@ -119,7 +69,6 @@ mini_prompt_marketplace/
 │   ├── login.html
 │   ├── upload.html
 │   └── prompts.html
-├── static/                    # (optional CSS or JS)
 ├── test_plan.md
 ├── risk_table.md
 ├── config_summary.md
@@ -137,15 +86,6 @@ mini_prompt_marketplace/
 
   * **v1.0** — Core upload & list functionality
   * **v1.1** — UI enhancement with Bootstrap
-
----
-
-## 📸 Deliverables
-
-* ✅ Working Flask App (`app.py`)
-* ✅ 3 HTML Templates (styled with Bootstrap)
-* ✅ Documentation (Test Plan, Risk Table, Config Summary)
-* ✅ Screenshots of each page (login → upload → list)
 
 ---
 
@@ -170,4 +110,3 @@ Deliver a **fully working demo** that demonstrates:
 ---
 
 ✳️ *Developed collaboratively as a mini team project for hands-on software engineering practice.*
-
