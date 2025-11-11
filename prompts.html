@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Prompts | Prompt Marketplace</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+        <a class="navbar-brand" href="{{ url_for('upload') }}">Prompt Marketplace</a>
+        <div>
+            <a class="btn btn-light btn-sm me-2" href="{{ url_for('upload') }}">Upload New</a>
+            <a class="btn btn-outline-light btn-sm" href="{{ url_for('logout') }}">Logout</a>
+        </div>
+    </div>
+</nav>
+
+<div class="container mt-5">
+    <h3 class="mb-4 text-primary">All Uploaded Prompts</h3>
+    <div class="table-responsive shadow-sm">
+        <table class="table table-bordered table-hover align-middle bg-white">
+            <thead class="table-primary">
+                <tr>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Sample Output</th>
+                    <th>Author</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for p in prompts %}
+                <tr>
+                    <td><strong>{{ p[0] }}</strong></td>
+                    <td>{{ p[1] }}</td>
+                    <td><code>{{ p[2] }}</code></td>
+                    <td>{{ p[3] }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <p class="text-center text-muted mt-3">Total Prompts: {{ prompts|length }}</p>
+</div>
+</body>
+</html>
